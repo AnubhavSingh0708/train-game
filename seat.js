@@ -6,6 +6,6 @@ class Seat{
   }
   
   display(){
-    rect(x,y,50,100);
+    rect(this.x,this.y,50,100);
   }
 }

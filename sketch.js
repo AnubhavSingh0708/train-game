@@ -1,4 +1,4 @@
-seats = [];
+let seats = [];
 
 
 function setup(){

@@ -11,9 +11,12 @@ function setup(){
   
   let person = new Person("man", 1000, 500);
   persons.push(person);
+  
+  rectMode(CENTER);
 }
 
 function draw(){
+  background(255);
   for(let i =0;i<seats.length;i++){
     seats[i].display();
   }

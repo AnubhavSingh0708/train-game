@@ -13,7 +13,7 @@ class Person{
   }
   
   move(){
-    if(dist(mouseX,mouseY,this.x,this.y)<25&&mouseIsDown){
+    if(dist(mouseX,mouseY,this.x,this.y)<25&&mouseIsPressed){
     	this.x=mouseX;
       this.y=mouseY;
     }

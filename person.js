@@ -1,6 +1,6 @@
 class Person{
 
-  constuctor(type,x ,y){
+  constructor(type,x ,y){
     this.x = x;
     this.y=  y;
     this.type = type;

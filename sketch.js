@@ -9,7 +9,8 @@ function setup(){
     seats.push(seat);
   }
   
-  let person = Person("man", 1000, 500);
+  let person = new Person("man", 1000, 500);
+  persons.push(person);
 }
 
 function draw(){
@@ -20,5 +21,6 @@ function draw(){
   for(let i =0;i<persons.length;i++){
     persons[i].display();
     persons[i].snap();
+    persons[i].move();
   }
 }

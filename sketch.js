@@ -15,9 +15,9 @@ function setup(){
   let person = new Person("man", 1000, 500);
   persons.push(person);
   
-  let play = new Button(width / 2, height / 2, 100, 50, ()=>{gameState="play";
-                                                             this.pos.x = 1000;
-                                                             this.pos.y = 500});
+  let play = new Button(width / 2, height / 2, 100, 50, ()=>{gameState="play";})
+                                                             //this.pos.x = 1000;
+                                                             //this.pos.y = 500});
   buttons.push(play);
   
   rectMode(CENTER);

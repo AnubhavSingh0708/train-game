@@ -2,7 +2,7 @@ class Button{
 
   constructor(x,y,width,height,func){
     this.pos=createVector(x,y);
-    this,width= width;
+    this.width= width;
     this.height=height;
     this.func = func;
   }

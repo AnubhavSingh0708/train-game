@@ -25,10 +25,10 @@ function setup(){
 
 function draw(){
   background(255);
-  if(gameState = "start"){
+  if(gameState == "start"){
     buttons[0].display(); 
   
-  }else if(gameState = "play"){
+  }else if(gameState == "play"){
     for(let i = 0; i < seats.length; i++){
       seats[i].display();
     }

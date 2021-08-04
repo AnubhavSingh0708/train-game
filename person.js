@@ -4,7 +4,7 @@ class Person{
     this.x = x;
     this.y = y;
     this.type = type;
-  
+  	this.dragged=false;
   
   }
   
@@ -14,9 +14,16 @@ class Person{
   
   move(){
     if(dist(mouseX, mouseY, this.x, this.y) < 25 && mouseIsPressed){
-    	this.x = mouseX;
-      this.y = mouseY;
+			for(let i =0;i<persons.length;i++){
+      	if(persons[i].dragged == false){
+					this.dragged=true;
+				}
+			}
     }
+		if(this.dragged == true){
+			this.x = mouseX;
+      this.y = mouseY;
+		}
   }
   
   snap(){
@@ -24,6 +31,7 @@ class Person{
       if(dist(this.x, this.y, seats[i].x, seats[i].y) < 50 && !mouseIsPressed){
 				this.x = seats[i].x;
 				this.y = seats[i].y;
+				this.dragged = false;
 			}
     }
   }

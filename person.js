@@ -1,10 +1,10 @@
 class Person{
 
   constructor(type,x ,y){
-    this.x = x;
-    this.y = y;
-    this.type = type;
-  	this.dragged=false;
+  	this.x = x;
+  	this.y = y;
+  	this.type = type;
+  	this.dragged = false;
   
   }
   
@@ -13,18 +13,20 @@ class Person{
   }
   
   move(){
-    if(dist(mouseX, mouseY, this.x, this.y) < 25 && mouseIsPressed){
+   	if(dist(mouseX, mouseY, this.x, this.y) < 25 && mouseIsPressed){
 			for(let i =0;i<persons.length;i++){
-      	if(persons[i].dragged == false){
-					this.dragged=true;
+  			if(persons[i].dragged == false){
+					this.dragged = true
 				}
 			}
-    }
+		}else{
+			this.dragged = false
+		}
 		if(this.dragged == true){
 			this.x = mouseX;
-      this.y = mouseY;
+    	this.y = mouseY;
 		}
-  }
+	}
   
   snap(){
     for(let i =0;i<seats.length;i++){
@@ -33,6 +35,6 @@ class Person{
 				this.y = seats[i].y;
 				this.dragged = false;
 			}
-    }
-  }
+  	}
+	}
 }
